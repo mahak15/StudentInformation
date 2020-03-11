@@ -1,0 +1,46 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <filter>
+    <filter-name>f1</filter-name>
+    <filter-class>filter.RollNoFilter</filter-class>
+  </filter>
+  <filter>
+    <filter-name>f2</filter-name>
+    <filter-class>filter.NameFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>f1</filter-name>
+    <url-pattern>/StudentInfo</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>f2</filter-name>
+    <url-pattern>/StudentInfo</url-pattern>
+  </filter-mapping>
+
+
+  <listener>
+    <listener-class>
+      AllContextListeners.Listener
+    </listener-class>
+  </listener>
+
+
+
+  <servlet>
+    <servlet-name>StudentInformation</servlet-name>
+    <servlet-class>Servlet.StudentServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>StudentInformation</servlet-name>
+    <url-pattern>/StudentInfo</url-pattern>
+  </servlet-mapping>
+
+</web-app>
